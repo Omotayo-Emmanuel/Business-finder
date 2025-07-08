@@ -1,5 +1,7 @@
 import requests #Used to make HTTP requsets to our API
 from unicodedata import category
+from haversine import haversine
+from typing import Tuple, Optional
 
 
 class Business:
@@ -142,12 +144,13 @@ class Business:
             return None
 
     @classmethod # showing that this method belongs the class not just an individual object
-    def from_geoapify(cls, data):
+    def from_geoapify(cls, data:dict, user_coords:Optional[Tuple[float, float]] = None):
         """
         Factory method to create a Business object directly from Geoapify API response.
 
         Args:
             data (dict): A single Geoapify result (from features list).
+            user_coords (tuple, optional): User's (lat, lon) for distance calculation fallback.
         Returns:
             Business: A new Business instance.
         """
@@ -162,13 +165,19 @@ class Business:
         lon = data["geometry"]["coordinates"][0]
 
         # Distance from user location using geoapify provides this automatically
-        distance  = properties.get("distance", 0)
+        distance  = properties.get("distance")
+
+        # if not provided, compute it manually
+        if distance is None and user_coords:
+            distance = haversine(user_coords, (lat, lon)) * 1000  # in meters
+        elif distance is None:
+            distance = 0  # fallback if no user_coords
 
         # Trying to extract the business category
         business_category = properties.get("categories", ["unknown"])[0].split("/")[-1]
 
         # Creating and return a new Business object with the extracted data
-        return cls(name, address, (lat,lon), distance,business_category)
+        return cls(name, address, (lat,lon), round(distance,2) ,business_category)
 
 
 
