@@ -1,6 +1,12 @@
 # core/location_manager.py
 import requests
-from business_finder_2.config.config import API_KEY, GEOCODE_ENDPOINT
+import  logging  # Used for structured and scalable logging instead of print statements
+# ❌ Removed this:
+# from business_finder_2.config.config import API_KEY
+
+# ✅ Reason:
+# Hardcoding or importing sensitive keys like API_KEY directly into multiple files is insecure and breaks reusability.
+# Instead, we now pass the API key as a method argument for better modularity and security.
 
 
 class LocationManager:
@@ -11,14 +17,19 @@ class LocationManager:
     geocoding API to convert human-readable addresses to geographic coordinates.
     """
 
+    # Instead of importing the endpoint from another file, we define it here so that the class is self-contained and reusable.
+    # This also makes it easier to override or test if needed.
+
+    GEOCODE_ENDPOINT = "https://api.geoapify.com/v1/geocode/search"
+
     @staticmethod
-    def geocode_address(address):
+    def geocode_address(address: str, api_key: str) ->dict|None :
         """
         Convert a human-readable address to geographic coordinates.
 
         Args:
             address (str): The address to geocode (e.g., "1600 Pennsylvania Ave NW, Washington, DC")
-
+            api_key (str): Geoapify API key
         Returns:
             dict: Dictionary containing:
                 - 'lat': Latitude coordinate
@@ -31,14 +42,14 @@ class LocationManager:
         """
         params = {
             'text': address,
-            'apiKey': API_KEY,
+            'apiKey': api_key,
             'format': 'json',
             'limit': 1
         }
 
         try:
             print(f"Attempting to geocode: {address}")  # Debug print
-            response = requests.get(GEOCODE_ENDPOINT, params=params, timeout=10)
+            response = requests.get(LocationManager.GEOCODE_ENDPOINT, params=params, timeout=10)
             print(f"API Response Status: {response.status_code}")  # Debug
 
             response.raise_for_status()
