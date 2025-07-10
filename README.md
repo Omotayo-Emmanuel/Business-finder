@@ -5,7 +5,6 @@ Here's a comprehensive, well-structured `README.md` for your Location-Based Busi
 
 A Python application that finds businesses near a specified location using Geoapify API, with a user-friendly Streamlit GUI. Features include business search, distance calculation, ratings, and interactive maps.
 
-![Demo Screenshot](static/demo_screenshot.png) *(Replace with actual screenshot)*
 
 ## ✨ Features
 
