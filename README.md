@@ -143,34 +143,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - youremail@example.com
+Ayotunde David Anointing - ayotundeferanmi09@gmail.com
 
-Project Link: [https://github.com/yourusername/business-finder](https://github.com/yourusername/business-finder)
-```
-
-## Recommended Enhancements:
-
-1. **Add Screenshots**: Include actual demo screenshots in `/static/`
-2. **Video Demo**: Consider adding a link to a screen recording
-3. **Deployment Instructions**: Add sections for:
-   ```markdown
-   ## 🚀 Deployment
-   ### Heroku
-   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](your_heroku_url)
-   
-   ### Local Docker
-   ```bash
-   docker build -t business-finder .
-   docker run -p 8501:8501 business-finder
-   ```
-   ```
-4. **Badges**: Add shields.io badges for:
-   ```markdown
-   ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-   ![License](https://img.shields.io/badge/license-MIT-green)
-   ```
-
-Would you like me to:
-1. Generate a matching `requirements.txt` file?
-2. Create a sample `.env` file template?
-3. Add more detailed API documentation sections?
+Project Link: [https://github.com/Omotayo-Emmanuel/Business-finder](https://github.com/Omotayo-Emmanuel/Business-finder)
