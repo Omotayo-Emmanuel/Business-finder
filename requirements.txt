@@ -1,7 +1,20 @@
-requests~=2.32.4
-geopy
-haversine~=2.9.0
-folium
-streamlit~=1.46.1
-dotenv~=0.9.9
-python-dotenv~=1.1.1
+# Core Requirements
+streamlit==1.32.2
+folium==0.14.0
+requests==2.31.0
+python-dotenv==1.0.0
+haversine==2.8.0
+
+# Additional Utilities
+streamlit-geolocation==0.1.4
+unicodedata2==15.1.0  # For better Unicode handling
+
+# Development/Testing
+pytest==8.0.2
+black==24.3.0
+flake8==6.1.0
+mypy==1.8.0
+
+# Optional (for enhanced features)
+geopy==2.4.1          # Alternative geocoding
+pandas==2.1.4         # For data analysis extensions
