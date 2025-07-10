@@ -1,10 +1,10 @@
 # core/location_manager.py
 import requests
 import  logging  # Used for structured and scalable logging instead of print statements
-# ❌ Removed this:
+# Removed this:
 # from business_finder_2.config.config import API_KEY
 
-# ✅ Reason:
+# Reason:
 # Hardcoding or importing sensitive keys like API_KEY directly into multiple files is insecure and breaks reusability.
 # Instead, we now pass the API key as a method argument for better modularity and security.
 

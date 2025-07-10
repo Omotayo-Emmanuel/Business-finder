@@ -224,8 +224,7 @@ def save_map_html(lat: float, lon: float, businesses: list, api_key: str, filena
         <head><title>Business Locations</title></head>
         <body>
             <h2>Business Locations</h2>
-            <img src="https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=800&height=600&
-            {markers}center=lonlat:{lon},{lat}&zoom=14&apiKey={api_key}" 
+            <img src="https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=800&height=600&{markers}center=lonlat:{lon},{lat}&zoom=14&apiKey={api_key}" 
             alt="Business Locations Map" style="width:100%; max-width:800px;">
             <ol>{"".join(f"<li>{b.name} - {b.address}</li>" for b in businesses)}</ol>
         </body>
