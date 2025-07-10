@@ -143,6 +143,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
+
 Ayotunde David Anointing - ayotundeferanmi09@gmail.com
+Momoh Muhammad Mubarak - Mubby1708@gmail.com
 
 Project Link: [https://github.com/Omotayo-Emmanuel/Business-finder](https://github.com/Omotayo-Emmanuel/Business-finder)
