@@ -1,6 +1,6 @@
-from business import Business
+from core.business import Business
 from typing import List, Tuple, Any
-from utils import make_api_request, log_error, validate_api_key
+from core.utils import make_api_request, log_error, validate_api_key
 import requests
 
 
@@ -21,7 +21,7 @@ class BusinessFinder:
         self.api_key = api_key
 
 
-    def search_businesses(self, coords: Tuple[float, float], business_type: str, radius: int =5000) -> list[Any]:
+    def search_businesses(self, coords: Tuple[float, float], business_type: str, radius: int =10000) -> list[Any]:
         """Search for businesses near the given coordinates.
 
         Args:
@@ -40,7 +40,7 @@ class BusinessFinder:
             "filter": f"circle:{lon},{lat},{radius}",
             "bias": f"proximity:{lon},{lat}",
             "limit": 20,
-            "apikey": self.api_key
+            "apiKey": self.api_key
         }
 
         try:

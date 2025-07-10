@@ -1,4 +1,7 @@
-requests
+requests~=2.32.4
 geopy
-haversine
+haversine~=2.9.0
 folium
+streamlit~=1.46.1
+dotenv~=0.9.9
+python-dotenv~=1.1.1
