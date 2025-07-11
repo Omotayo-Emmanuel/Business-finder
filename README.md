@@ -1,12 +1,8 @@
-Here's a comprehensive, well-structured `README.md` for your Location-Based Business Finder project:
-
-```markdown
-# 🌍 Location-Based Business Finder
+# Location-Based Business Finder
 
 A Python application that finds businesses near a specified location using Geoapify API, with a user-friendly Streamlit GUI. Features include business search, distance calculation, ratings, and interactive maps.
 
-
-## ✨ Features
+## Features
 
 - **Location-Based Search**: Find businesses by category near any address or your current location
 - **Interactive Maps**: Visualize business locations with Folium/Geoapify maps
@@ -16,7 +12,7 @@ A Python application that finds businesses near a specified location using Geoap
 - **Secure Configuration**: API keys stored in `.env` file
 - **Error Handling**: Robust logging and retry mechanisms for API calls
 
-## 📦 Project Structure
+## Project Structure
 
 ```text
 business_finder/
@@ -38,7 +34,7 @@ business_finder/
 └── README.md              # This documentation
 ```
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
