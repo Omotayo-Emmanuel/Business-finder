@@ -57,11 +57,38 @@ class GUIManager:
 
             # Use an expandable section for displaying directions (optional for users)
             with st.expander("Directions"):
-                # Use business method to fetch directions from user location to business
-                directions = business.get_directions(user_coords, self.geoapify_key)
-                # Display directions if successful, else show error message
-                st.markdown(directions if directions else "Couldn't fetch directions.")
+                # added this to be able to change the direction type
+                travel_mode = st.selectbox("Choose mode of travel",
+                                           ["walk", "drive", "bike"],
+                                           index=0,
+                                           key=f"travel_mode_{i}" )
 
+                if st.button("Get Directions", key=f"directions_btn_{i}"):
+                    # Use business method to fetch directions from user location to business
+                    directions = business.get_directions(user_coords, self.geoapify_key, travel_mode)
+
+                    # Store in session state for paging
+                    if isinstance(directions, list):
+                        st.session_state[f"directions_steps_{i}"] = directions
+                        st.session_state[f"directions_index_{i}"] = 5
+                    else:
+                        st.session_state[f"directions_steps_{i}"] = [directions]  # store error message as list
+                        st.session_state[f"directions_index_{i}"] = 1
+
+                    st.session_state["active_directions"] = i  # Track active business
+
+                # Display directions if already fetched
+                if f"directions_steps_{i}" in st.session_state:
+                    steps = st.session_state[f"directions_steps_{i}"]
+                    index = st.session_state[f"directions_index_{i}"]
+                    shown_steps = steps[:index]
+
+                    for j, step in enumerate(shown_steps, 1):
+                        st.markdown(f"{j}. {step}")
+
+                    if index < len(steps):
+                        if st.button("Show More Directions", key=f"show_more_{i}"):
+                            st.session_state[f"directions_index_{i}"] += 5
             # Provide a clickable link to view the business on OpenStreetMap
             map_url = f"https://www.openstreetmap.org/?mlat={business.latitude}&mlon={business.longitude}#map=18"
             st.markdown(f"[View on Map]({map_url})", unsafe_allow_html=True)

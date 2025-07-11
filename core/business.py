@@ -47,7 +47,7 @@ class Business:
             details += f"Rating: {self.rating}/10 "
         return details
 
-    def get_directions(self, start_cords, api_key, mode =  "walk") ->str:
+    def get_directions(self, start_cords, api_key, mode =  "walk") ->list | str:
         """Fetch directions from a starting point to this business using Geoapify Routing API.
 
         Args:
@@ -56,7 +56,7 @@ class Business:
             mode (str): Travel mode ('walk', 'drive', 'bike').
 
         Returns:
-            str: Directions to the business or None if unavailable.
+            list or string: List of step instruction strings, or a list with a single error message.
         """
         # API endpoint for Geoapify routing
         url = "https://api.geoapify.com/v1/routing"
@@ -66,31 +66,27 @@ class Business:
             # this defines our
             "waypoints": f"{start_cords[0]},{start_cords[1]}|{self.latitude},{self.longitude}",
             "mode" : mode,
-            "apikey": api_key
+            "apiKey": api_key
         }
 
         try:
             # Use Get request to ask Geoapify for directions
             response  = requests.get(url, params=query_param)
+
+            # Check if the request was successful
+            if response.status_code != 200:
+                return f"Error: Received status code {response.status_code} from Geoapify"
+
             data = response.json() # Parse the JSON (make it in a format python will understand)
 
             # Checking if the response contains valid directions
             if "features" in data and data["features"]:
-                # Extracting Individual steps from the first route leg
                 steps = data["features"][0]["properties"]["legs"][0]["steps"]
-                directions = "Directions: \n"
-
-                # Show only the first 5 steps to keep output short
-                for step in steps[:5]: # slicing to the first 5 items
-                    directions += f" {step["instruction"]}\n"
-
-                directions += "... (more steps available)"
-                return directions # returning the formatted step-by-step directions
+                return [step["instruction"]["text"] for step in steps]
             else:
-                return "Directions aren't available. " # A fallback if no direction was found
-
+                return "Directions aren't available."
         except Exception as e:
-            return f" Error while fetching directions: {str(e)}"
+            return f"Error while fetching directions: {str(e)}"
 
     def fetch_rating_from_foursquare(self, fsq_api_key) -> float|None:
         """
