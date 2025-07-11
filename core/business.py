@@ -75,16 +75,19 @@ class Business:
 
             # Check if the request was successful
             if response.status_code != 200:
-                return f"Error: Received status code {response.status_code} from Geoapify"
+                return [f"Error: Received status code {response.status_code} from Geoapify"]
 
             data = response.json() # Parse the JSON (make it in a format python will understand)
 
             # Checking if the response contains valid directions
             if "features" in data and data["features"]:
-                steps = data["features"][0]["properties"]["legs"][0]["steps"]
-                return [step["instruction"]["text"] for step in steps]
-            else:
-                return "Directions aren't available."
+                steps = data["features"][0]["properties"]["legs"][0].get("steps", [])
+                if not steps:
+                    return ["No route steps found."]
+
+                return [step.get("instruction", {}).get("text", "No instruction") for step in steps]
+
+            return ["Directions aren't available."]
         except Exception as e:
             return f"Error while fetching directions: {str(e)}"
 
