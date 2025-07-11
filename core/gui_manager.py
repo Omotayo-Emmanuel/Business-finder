@@ -40,6 +40,11 @@ class GUIManager:
             businesses (list): List of Business objects.
             user_coords (tuple): User's coordinates for generating directions.
         """
+
+        # Store businesses and user_coords in session state
+        st.session_state['current_businesses'] = businesses
+        st.session_state['user_coords'] = user_coords
+
         # Looping through each business found in the list and display their details
         for i, business in enumerate(businesses, 1):
             st.markdown(f"---")
@@ -55,40 +60,49 @@ class GUIManager:
             else:
                 st.write("Rating: Not available")
 
+            # Initialize session state for this business's directions
+            if f"directions_{i}" not in st.session_state:
+                st.session_state[f"directions_{i}"] = {
+                    "mode": "walk",
+                    "steps": None,
+                    "index": 5
+                }
+
             # Use an expandable section for displaying directions (optional for users)
             with st.expander("Directions"):
+                # Get current state for this business
+                dir_state = st.session_state[f"directions_{i}"]
                 # added this to be able to change the direction type
                 travel_mode = st.selectbox("Choose mode of travel",
                                            ["walk", "drive", "bike"],
-                                           index=0,
-                                           key=f"travel_mode_{i}" )
+                                           index=["walk", "drive", "bike"].index(dir_state["mode"]),
+                                           key=f"mode_select_{i}" )
 
-                if st.button("Get Directions", key=f"directions_btn_{i}"):
-                    # Use business method to fetch directions from user location to business
-                    directions = business.get_directions(user_coords, self.geoapify_key, travel_mode)
+            # Update session state when travel mode changes
+            if travel_mode != dir_state["mode"]:
+                dir_state["mode"] = travel_mode
+                dir_state["steps"] = None  # Clear old directions
+                dir_state[f"directions_{i}"] = dir_state
 
-                    # Store in session state for paging
-                    if isinstance(directions, list):
-                        st.session_state[f"directions_steps_{i}"] = directions
-                        st.session_state[f"directions_index_{i}"] = 5
-                    else:
-                        st.session_state[f"directions_steps_{i}"] = [directions]  # store error message as list
-                        st.session_state[f"directions_index_{i}"] = 1
+            if st.button("Get Directions", key=f"directions_btn_{i}"):
+                # Use business method to fetch directions from user location to business
+                directions = business.get_directions(user_coords,
+                                                     self.geoapify_key,
+                                                     dir_state["mode"])
 
-                    st.session_state["active_directions"] = i  # Track active business
+                dir_state["steps"] = directions if isinstance(directions, list) else [str(directions)]
+                dir_state["index"] = 5
+                st.session_state[f"directions_{i}"] = dir_state
 
-                # Display directions if already fetched
-                if f"directions_steps_{i}" in st.session_state:
-                    steps = st.session_state[f"directions_steps_{i}"]
-                    index = st.session_state[f"directions_index_{i}"]
-                    shown_steps = steps[:index]
+                # Display directions if available
+            if dir_state["steps"]:
+                for j, step in enumerate(dir_state["steps"][:dir_state["index"]], 1):
+                    st.markdown(f"{j}. {step}")
 
-                    for j, step in enumerate(shown_steps, 1):
-                        st.markdown(f"{j}. {step}")
-
-                    if index < len(steps):
-                        if st.button("Show More Directions", key=f"show_more_{i}"):
-                            st.session_state[f"directions_index_{i}"] += 5
+                if dir_state["index"] < len(dir_state["steps"]):
+                    if st.button("Show More Directions", key=f"more_{i}"):
+                        dir_state["index"] += 5
+                        st.session_state[f"directions_{i}"] = dir_state
             # Provide a clickable link to view the business on OpenStreetMap
             map_url = f"https://www.openstreetmap.org/?mlat={business.latitude}&mlon={business.longitude}#map=18"
             st.markdown(f"[View on Map]({map_url})", unsafe_allow_html=True)
@@ -129,6 +143,11 @@ class GUIManager:
         # Display or main title and description
         st.title("Businesses close-by")
         st.markdown("Enter your location and insert a business type to discover nearby places!")
+
+        # Check if we have existing search results to display
+        if 'current_businesses' in st.session_state and 'user_coords' in st.session_state:
+            self.display_businesses(st.session_state['current_businesses'], st.session_state['user_coords'])
+            return  # Skip the search form if we're showing results
 
         # Creating a radio button for user to choose between automatic and manual
         location_method = st.radio("How would you like to set current location?",("Use my current location", "Enter location manually"))
@@ -171,7 +190,7 @@ class GUIManager:
                     st.warning("Location is missing. Please provide or allow location access.")
                     return # To prevent the app from continuing with a search when the input is invalid
 
-                if not user_coords:
+                if not category_input:
                     st.warning("Please enter a business type.")
                     return
 
