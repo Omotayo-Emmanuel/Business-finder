@@ -214,9 +214,16 @@ def save_map_html(lat: float, lon: float, businesses: list, api_key: str, filena
         filename (str): Output file path
     """
     try:
-        markers = "".join(
-            f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        markers = "&".join(
+            f"markers=lonlat:{b.longitude},{b.latitude};color:blue;text:{i + 1};size:small"
             for i, b in enumerate(businesses)
+        )
+
+        # Constructing full Geoapify static map URL
+        map_url = (
+            f"https://maps.geoapify.com/v1/staticmap?"
+            f"style=osm-carto&width=800&height=600&{markers}"
+            f"&center=lonlat:{lon},{lat}&zoom=14&apiKey={api_key}"
         )
 
         html_content = f"""<!DOCTYPE html>
@@ -224,8 +231,7 @@ def save_map_html(lat: float, lon: float, businesses: list, api_key: str, filena
         <head><title>Business Locations</title></head>
         <body>
             <h2>Business Locations</h2>
-            <img src="https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=800&height=600&{markers}center=lonlat:{lon},{lat}&zoom=14&apiKey={api_key}" 
-            alt="Business Locations Map" style="width:100%; max-width:800px;">
+             <img src="{map_url}" alt="Business Locations Map" style="width:100%; max-width:800px;">
             <ol>{"".join(f"<li>{b.name} - {b.address}</li>" for b in businesses)}</ol>
         </body>
         </html>"""
