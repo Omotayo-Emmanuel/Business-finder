@@ -1,52 +1,37 @@
 from config.config import Config
-from business import Business
-import requests
-# Load API keys
+from business_finder import BusinessFinder
+from location_manager import LocationManager
+
+# Load configuration and API keys
 config = Config()
 geoapify_key = config.get_api_key("geoapify")
-fsq_key = config.get_api_key("foursquare")
+foursquare_key = config.get_api_key("foursquare")
 
-#  Set up your location
-user_cords = (9.0579, 7.4951)
+# Convert address to coordinates
+address = "Wuye, Abuja, Nigeria"
+location_data = LocationManager.geocode_address(address, geoapify_key)
 
-url = "https://api.geoapify.com/v2/places"
-params = {
-    "categories": "catering.restaurant",
-    "filter": f"circle:{user_cords[1]},{user_cords[0]},1000",
-    "bias": f"proximity:{user_cords[1]},{user_cords[0]}",
-    "limit": 5,
-    "apiKey": geoapify_key
-}
+if location_data:
+    user_coords = (location_data['lat'], location_data['lon'])
+    print(f"📍 Coordinates for {address}: {user_coords}")
 
-try:
-    response = requests.get(url, params=params)
-    data = response.json()
+    # Instantiate BusinessFinder with Geoapify API key
+    finder = BusinessFinder(geoapify_key)
 
-    if "features" not in data or not data["features"]:
-        print("❌ No businesses found in your area.")
-    else:
-        print(f"✅ Found {len(data['features'])} nearby businesses:\n")
+    # Search for businesses (e.g., catering services)
+    businesses = finder.search_businesses(user_coords, business_type="catering", radius=2000)
 
-        for i, feature in enumerate(data["features"], 1):
-            # Create a Business object from Geoapify response
-            business = Business.from_geoapify(feature)
+    if businesses:
+        print(f"\n✅ Found {len(businesses)} businesses near {address}:\n")
+        for i, biz in enumerate(businesses, 1):
+            # Fetch Foursquare rating using your built-in method
+            rating = biz.fetch_rating_from_foursquare(foursquare_key)
 
             print(f"🔹 Business #{i}")
-            print(business.get_details())
-
-            # Fetch and attach Foursquare rating
-            rating = business.fetch_rating_from_foursquare(fsq_key)
-            if rating:
-                business.set_rating(rating)
-                print(f"⭐ Rating (Foursquare): {rating/2}/10")
-            else:
-                print("⭐ Rating not available on Foursquare")
-
-            # Attempt to get directions from user to business
-            print("\n📍 Directions:")
-            directions = business.get_directions(user_cords, geoapify_key)
-            print(directions)
+            print(biz.get_details())  # Assuming get_details shows rating
             print("-" * 50)
+    else:
+        print("❌ No businesses found.")
 
-except Exception as e:
-    print(f"⚠️ An error occurred while fetching business data: {e}")
+else:
+    print(f"⚠️ Couldn't geocode location: {address}")

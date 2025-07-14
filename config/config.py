@@ -28,7 +28,7 @@ class Config:
 
 
 
-    def get_api_key(self, service:str  = "geoapify") -> str:
+    def get_api_key(self, service:str) -> str:
         """Return the API key for external services.
         :param service: either "geoapify" or "Foursquare"
         :return: API key as a string"""

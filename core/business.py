@@ -1,11 +1,13 @@
 import requests #Used to make HTTP requsets to our API
 from unicodedata import category
+from haversine import haversine
+from typing import Tuple, Optional
 
 
 class Business:
     """Represents a single business entity with details like name, address, and coordinates."""
 
-    def __init__(self, name, address, coordinates,distance_m, category, rating=None):
+    def __init__(self, name, address, coordinates,distance_m, category, rating=None, phone = None, email = None, website  = None):
         """Initialize a business object with provided details.
 
         Args:
@@ -16,6 +18,9 @@ class Business:
             distance_m (float): Distance from user''s location in meters.
             category (str): Type/category of the business (e.g restaurant)
             rating (float, optional): Rating of the business.
+            phone (str, optional): Phone number of the business.
+            email (str, optional): Email address of the business.
+            website (str, optional): Website URL of the business.
         """
         self.name  = name
         self.address = address
@@ -23,6 +28,9 @@ class Business:
         self.distance_m = distance_m # How far the business is from the user
         self.category = category
         self.rating = rating
+        self.phone = phone
+        self.email = email
+        self.website = website
 
     def set_rating(self, rating) -> None:
         """
@@ -41,11 +49,18 @@ class Business:
         details += f"Distance: {self.distance_m} meters\n"
         details += f"Category: {self.category}\n"
 
+        if self.phone:
+            details += f"Phone: {self.phone}\n"
+        if self.email:
+            details += f"Email: {self.email}\n"
+        if self.website:
+            details += f"Website: {self.website}\n"
+
         if self.rating: # Only show if rating is available
             details += f"Rating: {self.rating}/10 "
         return details
 
-    def get_directions(self, start_cords, api_key, mode =  "walk") ->str:
+    def get_directions(self, start_cords, api_key, mode =  "walk") ->list | str:
         """Fetch directions from a starting point to this business using Geoapify Routing API.
 
         Args:
@@ -54,7 +69,7 @@ class Business:
             mode (str): Travel mode ('walk', 'drive', 'bike').
 
         Returns:
-            str: Directions to the business or None if unavailable.
+            list or string: List of step instruction strings, or a list with a single error message.
         """
         # API endpoint for Geoapify routing
         url = "https://api.geoapify.com/v1/routing"
@@ -64,31 +79,30 @@ class Business:
             # this defines our
             "waypoints": f"{start_cords[0]},{start_cords[1]}|{self.latitude},{self.longitude}",
             "mode" : mode,
-            "apikey": api_key
+            "apiKey": api_key
         }
 
         try:
             # Use Get request to ask Geoapify for directions
             response  = requests.get(url, params=query_param)
+
+            # Check if the request was successful
+            if response.status_code != 200:
+                return [f"Error: Received status code {response.status_code} from Geoapify"]
+
             data = response.json() # Parse the JSON (make it in a format python will understand)
 
             # Checking if the response contains valid directions
             if "features" in data and data["features"]:
-                # Extracting Individual steps from the first route leg
-                steps = data["features"][0]["properties"]["legs"][0]["steps"]
-                directions = "Directions: \n"
+                steps = data["features"][0]["properties"]["legs"][0].get("steps", [])
+                if not steps:
+                    return ["No route steps found."]
 
-                # Show only the first 5 steps to keep output short
-                for step in steps[:5]: # slicing to the first 5 items
-                    directions += f" {step["instruction"]}\n"
+                return [step.get("instruction", {}).get("text", "No instruction") for step in steps]
 
-                directions += "... (more steps available)"
-                return directions # returning the formatted step-by-step directions
-            else:
-                return "Directions aren't available. " # A fallback if no direction was found
-
+            return ["Directions aren't available."]
         except Exception as e:
-            return f" Error while fetching directions: {str(e)}"
+            return f"Error while fetching directions: {str(e)}"
 
     def fetch_rating_from_foursquare(self, fsq_api_key) -> float|None:
         """
@@ -142,12 +156,13 @@ class Business:
             return None
 
     @classmethod # showing that this method belongs the class not just an individual object
-    def from_geoapify(cls, data):
+    def from_geoapify(cls, data:dict, user_coords:Optional[Tuple[float, float]] = None):
         """
         Factory method to create a Business object directly from Geoapify API response.
 
         Args:
             data (dict): A single Geoapify result (from features list).
+            user_coords (tuple, optional): User's (lat, lon) for distance calculation fallback.
         Returns:
             Business: A new Business instance.
         """
@@ -162,13 +177,29 @@ class Business:
         lon = data["geometry"]["coordinates"][0]
 
         # Distance from user location using geoapify provides this automatically
-        distance  = properties.get("distance", 0)
+        distance  = properties.get("distance")
+
+        # if not provided, compute it manually
+        if distance is None and user_coords:
+            distance = haversine(user_coords, (lat, lon)) * 1000  # in meters
+        elif distance is None:
+            distance = 0  # fallback if no user_coords
 
         # Trying to extract the business category
         business_category = properties.get("categories", ["unknown"])[0].split("/")[-1]
 
-        # Creating and return a new Business object with the extracted data
-        return cls(name, address, (lat,lon), distance,business_category)
+        # Fetching additional contact details if available
+        phone = properties.get("contact", {}).get("phone")
+        email = properties.get("contact", {}).get("email")
+        website = properties.get("contact", {}).get("website")
 
-
-
+        return cls(
+            name=name,
+            address=address,
+            coordinates=(lat, lon),
+            distance_m=round(distance, 2),
+            category=business_category,
+            phone=phone,
+            email=email,
+            website=website
+        )
