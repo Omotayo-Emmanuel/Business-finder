@@ -2,6 +2,7 @@ from typing import Tuple
 import folium
 
 import streamlit as st # GUI Library for our Web app
+from streamlit_folium import folium_static
 import streamlit.components.v1 as components  # Needed to render custom HTML
 from streamlit_geolocation import streamlit_geolocation
 
@@ -60,6 +61,16 @@ class GUIManager:
             else:
                 st.write("Rating: Not available")
 
+            # Optional contact info
+            if hasattr(business, 'phone') and business.phone:
+                st.write(f"**Phone:** {business.phone}")
+
+            if hasattr(business, 'email') and business.email:
+                st.write(f"**Email:** {business.email}")
+
+            if hasattr(business, 'website') and business.website:
+                st.markdown(f"**Website:** [Visit Site]({business.website})", unsafe_allow_html=True)
+
             # Initialize session state for this business's directions
             if f"directions_{i}" not in st.session_state:
                 st.session_state[f"directions_{i}"] = {
@@ -107,28 +118,48 @@ class GUIManager:
             map_url = f"https://www.openstreetmap.org/?mlat={business.latitude}&mlon={business.longitude}#map=18"
             st.markdown(f"[View on Map]({map_url})", unsafe_allow_html=True)
 
-    def render_map(self, user_coords: Tuple[float, float], businesses: list):
+    def render_map(self, user_coords: Tuple[float, float], businesses: list) -> None:
         """
-        Generate and display a map with business locations.
-
+        Generate and display an interactive Folium map in Streamlit showing user location
+        and nearby businesses with markers and connecting lines.
         Args:
             user_coords (tuple): (lat, lon) of the user's location to center the map.
             businesses (list): List of Business objects to display on map.
         """
         try:
-            os.makedirs("static", exist_ok=True) # Ensure the 'static' directory exists
-            map_file = "static/map.html"  # Where the HTML map is saved
+            # Initializing the map centered at the user's current location wih a moderate zoom level
+            user_map = folium.Map(location=user_coords, zoom_start=14)
 
-            # Save map HTML using the utility
-            save_map_html(user_coords[0], user_coords[1], businesses,self.geoapify_key ,filename=map_file)
+            # Adding marker for the user's location (green, labeled "Your Location")
+            folium.Marker(  # This is the marker function in folium
+                location=user_coords,
+                popup="Your Location",
+                icon=folium.Icon(color="green", icon="user")
+            ).add_to(user_map)
 
-            # Read and display the map in Streamlit
-            with open(map_file, 'r', encoding='utf-8') as file:
-                map_html = file.read()
-                components.html(map_html, height=600, scrolling=True)
+            # Looping through each business to add its own marker on the map
+            for i, business in enumerate(businesses, 1):
+                folium.Marker(
+                    location=(business.latitude, business.longitude),
+                    color="red",
+                    weight=2,
+                    opacity=0.7
+                ).add_to(user_map)
+
+            # Draw a straight line (polyline) from the user's location to each business location
+            for business in businesses:
+                folium.PolyLine(
+                    locations=[user_coords, (business.latitude, business.longitude)],
+                    color='gray',
+                    weight=2,
+                    opacity=0.7
+                ).add_to(user_map)
+
+            # Display the entire map within Streamlit using the folium_static function
+            folium_static(user_map, width=800, height=500)
 
         except Exception as e:
-            st.error("Failed to load map.")
+            st.error("Failed to load interactive map.")
             st.exception(e)
 
 
@@ -218,4 +249,3 @@ class GUIManager:
 
                 # Show business details
                 self.display_businesses(sorted_businesses, user_coords)
-

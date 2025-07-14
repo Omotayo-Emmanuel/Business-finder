@@ -215,7 +215,7 @@ GEOAPIFY_CATEGORIES = [
 ]
 
 
-def match_category(user_input):
+def match_category(user_input) -> str:
     """
     Fuzzy-matches user input to the closest Geoapify category.
 

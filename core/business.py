@@ -7,7 +7,7 @@ from typing import Tuple, Optional
 class Business:
     """Represents a single business entity with details like name, address, and coordinates."""
 
-    def __init__(self, name, address, coordinates,distance_m, category, rating=None):
+    def __init__(self, name, address, coordinates,distance_m, category, rating=None, phone = None, email = None, website  = None):
         """Initialize a business object with provided details.
 
         Args:
@@ -18,6 +18,9 @@ class Business:
             distance_m (float): Distance from user''s location in meters.
             category (str): Type/category of the business (e.g restaurant)
             rating (float, optional): Rating of the business.
+            phone (str, optional): Phone number of the business.
+            email (str, optional): Email address of the business.
+            website (str, optional): Website URL of the business.
         """
         self.name  = name
         self.address = address
@@ -25,6 +28,9 @@ class Business:
         self.distance_m = distance_m # How far the business is from the user
         self.category = category
         self.rating = rating
+        self.phone = phone
+        self.email = email
+        self.website = website
 
     def set_rating(self, rating) -> None:
         """
@@ -42,6 +48,13 @@ class Business:
         details += f"Address: {self.address}\n"
         details += f"Distance: {self.distance_m} meters\n"
         details += f"Category: {self.category}\n"
+
+        if self.phone:
+            details += f"Phone: {self.phone}\n"
+        if self.email:
+            details += f"Email: {self.email}\n"
+        if self.website:
+            details += f"Website: {self.website}\n"
 
         if self.rating: # Only show if rating is available
             details += f"Rating: {self.rating}/10 "
@@ -175,8 +188,18 @@ class Business:
         # Trying to extract the business category
         business_category = properties.get("categories", ["unknown"])[0].split("/")[-1]
 
-        # Creating and return a new Business object with the extracted data
-        return cls(name, address, (lat,lon), round(distance,2) ,business_category)
+        # Fetching additional contact details if available
+        phone = properties.get("contact", {}).get("phone")
+        email = properties.get("contact", {}).get("email")
+        website = properties.get("contact", {}).get("website")
 
-
-
+        return cls(
+            name=name,
+            address=address,
+            coordinates=(lat, lon),
+            distance_m=round(distance, 2),
+            category=business_category,
+            phone=phone,
+            email=email,
+            website=website
+        )
