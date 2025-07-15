@@ -1,6 +1,6 @@
 from core.business import Business
 from typing import List, Tuple, Any
-from core.utils import make_api_request, log_error, validate_api_key
+from config.utils import make_api_request, log_error, validate_api_key
 import requests
 
 
