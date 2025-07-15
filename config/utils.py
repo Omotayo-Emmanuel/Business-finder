@@ -1,6 +1,7 @@
 # core/utils.py
 import webbrowser
 import os
+import requests
 import logging
 from functools import wraps
 import time
@@ -263,3 +264,27 @@ def time_function(func: Callable) -> Callable:
         return result
 
     return wrapper
+
+def get_location_from_ip(api_key: str) -> tuple|None:
+    """
+    Uses Geoapify IP Geolocation API to estimate user location based on their IP address.
+    Args:
+        api_key (str): Your Geoapify API key.
+    Returns:
+        tuple or None: (latitude, longitude) if successful, else None.
+    """
+    url = "https://api.geoapify.com/v1/ipinfo"
+    params = {"apiKey": api_key}
+
+    try:
+        response = requests.get(url, params=params)
+        if response.status_code == 200:
+            data = response.json()
+            lat = data.get("location", {}).get("latitude")
+            lon = data.get("location", {}).get("longitude")
+            if lat and lon:
+                return (lat, lon)
+        return None
+    except Exception as e:
+        print(f"IP Geolocation failed: {e}")
+        return None
