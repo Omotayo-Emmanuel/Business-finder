@@ -1,0 +1,801 @@
+2025-07-10 16:07:22,872 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 16:20:00,918 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 16:29:50,826 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:25:18,128 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:26:08,096 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:26:31,080 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:26:45,322 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:27:20,690 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:27:41,693 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:28:04,012 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:28:47,923 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:29:09,845 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:44:17,254 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:52:38,939 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:53:33,428 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 18:54:08,462 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 19:09:21,359 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 19:18:20,294 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 19:19:41,048 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 19:23:09,473 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-10 19:28:04,658 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-11 05:56:14,374 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-11 06:02:20,896 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'lon'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+                      ^^^^^
+AttributeError: 'Business' object has no attribute 'lon'
+2025-07-11 06:09:52,903 - root - ERROR - Failed to generate map HTML: 'Business' object has no attribute 'longitutde'
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 217, in save_map_html
+    markers = "".join(
+        f"markers=lonlat:{b.longitutde},{b.latitude};color:blue;text:{i + 1};size:small&"
+        for i, b in enumerate(businesses)
+    )
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 218, in <genexpr>
+    f"markers=lonlat:{b.longitutde},{b.latitude};color:blue;text:{i + 1};size:small&"
+                      ^^^^^^^^^^^^
+AttributeError: 'Business' object has no attribute 'longitutde'. Did you mean: 'longitude'?
+2025-07-11 09:31:35,482 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=catering&filter=circle%3A7.36%2C9.14%2C10000&bias=proximity%3A7.36%2C9.14&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001856C2EDE50>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-11 09:31:35,545 - root - WARNING - Retry 1/3 for make_api_request after 1.0s
+2025-07-14 16:51:22,545 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=tourism&filter=circle%3A5.74%2C7.46%2C10000&bias=proximity%3A5.74%2C7.46&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001AF1A9025D0>, 'Connection to api.geoapify.com timed out. (connect timeout=10.0)'))
+2025-07-14 16:51:22,571 - root - WARNING - Retry 1/3 for make_api_request after 1.0s
+2025-07-14 16:51:43,596 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=tourism&filter=circle%3A5.74%2C7.46%2C10000&bias=proximity%3A5.74%2C7.46&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001AF1A902E90>, 'Connection to api.geoapify.com timed out. (connect timeout=10.0)'))
+2025-07-14 16:51:43,597 - root - WARNING - Retry 2/3 for make_api_request after 2.0s
+2025-07-14 16:52:05,631 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=tourism&filter=circle%3A5.74%2C7.46%2C10000&bias=proximity%3A5.74%2C7.46&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001AF1A902350>, 'Connection to api.geoapify.com timed out. (connect timeout=10.0)'))
+2025-07-14 16:52:05,689 - root - ERROR - Max retries (3) exceeded for make_api_request
+2025-07-14 16:52:05,713 - root - ERROR - Failed, to search businesses from Geoapify: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=tourism&filter=circle%3A5.74%2C7.46%2C10000&bias=proximity%3A5.74%2C7.46&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001AF1A902350>, 'Connection to api.geoapify.com timed out. (connect timeout=10.0)'))
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 207, in _new_conn
+    raise ConnectTimeoutError(
+    ...<2 lines>...
+    ) from e
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001AF1A902350>, 'Connection to api.geoapify.com timed out. (connect timeout=10.0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=tourism&filter=circle%3A5.74%2C7.46%2C10000&bias=proximity%3A5.74%2C7.46&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001AF1A902350>, 'Connection to api.geoapify.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\business_finder.py", line 47, in search_businesses
+    response = make_api_request(url, query_params)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 156, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 190, in make_api_request
+    return requests.get(url, params=params, timeout=timeout)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 688, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=tourism&filter=circle%3A5.74%2C7.46%2C10000&bias=proximity%3A5.74%2C7.46&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001AF1A902350>, 'Connection to api.geoapify.com timed out. (connect timeout=10.0)'))
+2025-07-14 18:43:01,672 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935D10>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 18:43:01,676 - root - WARNING - Retry 1/3 for make_api_request after 1.0s
+2025-07-14 18:43:02,702 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A9365D0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 18:43:02,706 - root - WARNING - Retry 2/3 for make_api_request after 2.0s
+2025-07-14 18:43:04,717 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935E50>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 18:43:04,718 - root - ERROR - Max retries (3) exceeded for make_api_request
+2025-07-14 18:43:04,719 - root - ERROR - Failed, to search businesses from Geoapify: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935E50>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000001AF1A935E50>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935E50>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\business_finder.py", line 47, in search_businesses
+    response = make_api_request(url, query_params)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 156, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 190, in make_api_request
+    return requests.get(url, params=params, timeout=timeout)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935E50>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 18:43:17,733 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=healthcare.hospital&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935E50>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 18:43:17,734 - root - WARNING - Retry 1/3 for make_api_request after 1.0s
+2025-07-14 18:43:30,127 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=healthcare.hospital&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A9365D0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 18:43:30,132 - root - WARNING - Retry 2/3 for make_api_request after 2.0s
+2025-07-14 18:43:32,172 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=healthcare.hospital&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935D10>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 18:43:32,174 - root - ERROR - Max retries (3) exceeded for make_api_request
+2025-07-14 18:43:32,175 - root - ERROR - Failed, to search businesses from Geoapify: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=healthcare.hospital&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935D10>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000001AF1A935D10>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=healthcare.hospital&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935D10>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\business_finder.py", line 47, in search_businesses
+    response = make_api_request(url, query_params)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 156, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 190, in make_api_request
+    return requests.get(url, params=params, timeout=timeout)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=healthcare.hospital&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935D10>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 18:45:28,936 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A936490>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 18:45:28,943 - root - WARNING - Retry 1/3 for make_api_request after 1.0s
+2025-07-14 20:22:26,366 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A553250>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 20:22:26,370 - root - WARNING - Retry 1/3 for make_api_request after 1.0s
+2025-07-14 20:22:38,676 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A9365D0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 20:22:38,677 - root - WARNING - Retry 2/3 for make_api_request after 2.0s
+2025-07-14 20:22:51,983 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A934410>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 20:22:51,989 - root - ERROR - Max retries (3) exceeded for make_api_request
+2025-07-14 20:22:52,004 - root - ERROR - Failed, to search businesses from Geoapify: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A934410>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000001AF1A934410>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A934410>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\business_finder.py", line 47, in search_businesses
+    response = make_api_request(url, query_params)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 156, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 190, in make_api_request
+    return requests.get(url, params=params, timeout=timeout)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.4985259%2C9.0562646%2C10000&bias=proximity%3A7.4985259%2C9.0562646&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A934410>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 23:02:41,654 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=healthcare.hospital&filter=circle%3A7.3531392%2C9.1553792%2C10000&bias=proximity%3A7.3531392%2C9.1553792&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A935F90>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 23:02:41,670 - root - WARNING - Retry 1/3 for make_api_request after 1.0s
+2025-07-14 23:44:40,589 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=catering.restaurant&filter=circle%3A7.3531392%2C9.1553792%2C10000&bias=proximity%3A7.3531392%2C9.1553792&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF1A553ED0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-14 23:44:40,601 - root - WARNING - Retry 1/3 for make_api_request after 1.0s
+2025-07-15 09:14:59,911 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=catering&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C307770>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-15 09:14:59,915 - root - WARNING - Retry 1/3 for make_api_request after 1.0s
+2025-07-15 09:15:00,929 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=catering&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C71AAD0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-15 09:15:00,930 - root - WARNING - Retry 2/3 for make_api_request after 2.0s
+2025-07-15 09:15:02,933 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=catering&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C71B4D0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-15 09:15:02,934 - root - ERROR - Max retries (3) exceeded for make_api_request
+2025-07-15 09:15:02,934 - root - ERROR - Failed, to search businesses from Geoapify: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=catering&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C71B4D0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000002D87C71B4D0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=catering&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C71B4D0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\business_finder.py", line 47, in search_businesses
+    response = make_api_request(url, query_params)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 156, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 190, in make_api_request
+    return requests.get(url, params=params, timeout=timeout)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=catering&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C71B4D0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-15 09:15:15,435 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C7191D0>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-15 09:15:15,436 - root - WARNING - Retry 1/3 for make_api_request after 1.0s
+2025-07-15 09:15:16,450 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C333890>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-15 09:15:16,455 - root - WARNING - Retry 2/3 for make_api_request after 2.0s
+2025-07-15 09:15:18,460 - root - ERROR - API request failed in make_api_request: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C71B250>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+2025-07-15 09:15:18,462 - root - ERROR - Max retries (3) exceeded for make_api_request
+2025-07-15 09:15:18,467 - root - ERROR - Failed, to search businesses from Geoapify: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C71B250>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000002D87C71B250>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C71B250>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\business_finder.py", line 47, in search_businesses
+    response = make_api_request(url, query_params)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 156, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\1040G7\Documents\INTERNSHIP\NITDA\Python Advance\business_finder\core\utils.py", line 190, in make_api_request
+    return requests.get(url, params=params, timeout=timeout)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\1040G7\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.geoapify.com', port=443): Max retries exceeded with url: /v2/places?categories=accommodation.hotel&filter=circle%3A7.37901%2C9.15867%2C10000&bias=proximity%3A7.37901%2C9.15867&limit=20&apiKey=507aeb6573834255b59f2f6896cbd684 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002D87C71B250>: Failed to resolve 'api.geoapify.com' ([Errno 11001] getaddrinfo failed)"))
