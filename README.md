@@ -1,28 +1,39 @@
 Location Based Business Finder
 
-A Python-based web application that helps users find nearby businesses (e.g., restaurants, bukas, pharmacies) using the Geoapify and Foursquare APIs, with a Streamlit interface for interactive maps and navigation. Built with Object-Oriented Programming (OOP), this project is tailored for Nigerian users, supporting local business categories like “buka” and “suya_spot,” and features live location tracking for real-time navigation.
+Welcome to Location Based Business Finder, a Python-based web application designed to help users discover nearby businesses, such as restaurants, bukas, and pharmacies, with interactive maps and real-time navigation. Built using Streamlit and powered by Geoapify and Foursquare APIs, this project is tailored for Nigerian users, supporting local business categories like “buka” and “suya_spot.” The application features an intuitive interface, live location tracking, and turn-by-turn directions, all developed with Object-Oriented Programming (OOP) principles for modularity and scalability.
 Table of Contents
 
 Features
+Demo
 Installation
 Usage
 Project Structure
 File Descriptions
-Known Issues
 Contributing
 License
+Contact
 
 Features
 
-Search Nearby Businesses: Find businesses by location (automatic via browser/IP or manual input) and category (e.g., “restaurant,” “buka”).
-Nigerian-Specific Categories: Supports local terms like “catering.buka,” “commercial.petty_trader,” and “catering.suya_spot.”
-Interactive Maps: Displays businesses on a Folium map with user and business markers, connected by lines.
-Turn-by-Turn Directions: Provides navigation instructions from the user’s location to a selected business using Geoapify.
-Live Location Tracking: Updates directions in real-time as the user moves (using browser geolocation).
-Robust Error Handling: Manages API failures, invalid inputs, and geolocation issues with user-friendly feedback.
-Map Export: Saves maps to static/map.html for offline viewing (optional).
+Find Nearby Businesses: Search for businesses by location (automatic via browser/IP or manual input) and category (e.g., “restaurant,” “buka”).
+Nigerian-Specific Categories: Supports local terms like “catering.buka,” “catering.suya_spot,” and “commercial.petty_trader” for a tailored experience.
+Interactive Maps: Visualize businesses on a Folium map with user and business markers connected by lines.
+Turn-by-Turn Directions: Get detailed navigation instructions from your location to a selected business using Geoapify.
+Live Location Tracking: Update directions in real-time as you move, leveraging browser geolocation.
+User-Friendly Interface: Built with Streamlit for a seamless, browser-based experience.
+Map Export: Save maps to static/map.html for offline viewing.
+Robust Error Handling: Manages invalid inputs, API failures, and geolocation issues with clear feedback.
 
+Demo
+
+Run the app with streamlit run main.py.
+Enter a location (e.g., “Wuye, Abuja”) or use automatic detection.
+Search for a category (e.g., “buka”).
+View businesses on an interactive map and click “Get Directions” for navigation.
+
+Note: Live tracking works best on mobile devices with GPS enabled.
 Installation
+Follow these steps to set up the project locally:
 
 Clone the Repository:
 git clone https://github.com/yourusername/location-based-business-finder.git
@@ -40,8 +51,8 @@ pip install streamlit folium streamlit-folium streamlit-geolocation requests pyt
 
 Configure API Keys:
 
-Sign up for Geoapify and Foursquare to get API keys.
-Create a .env file in the project root:GEOAPIFY_API_KEY=your_geoapify_key
+Sign up for Geoapify and Foursquare to obtain API keys.
+Create a .env file in the project root with the following:GEOAPIFY_API_KEY=your_geoapify_key
 FOURSQUARE_API_KEY=your_foursquare_key
 
 
@@ -50,7 +61,7 @@ FOURSQUARE_API_KEY=your_foursquare_key
 
 Usage
 
-Run the Application:
+Launch the Application:
 streamlit run main.py
 
 
@@ -59,21 +70,22 @@ This opens the app in your default browser (e.g., http://localhost:8501).
 
 Search for Businesses:
 
-Location: Choose “Use my current location” (browser geolocation or IP fallback) or enter an address (e.g., “Wuye, Abuja”).
-Business Type: Enter a category (e.g., “buka,” “pharmacy”). The app fuzzy-matches to valid categories.
+Location: Select “Use my current location” for automatic detection (browser or IP-based) or enter an address manually (e.g., “Lagos, Nigeria”).
+Business Type: Input a category (e.g., “buka,” “pharmacy”). The app uses fuzzy matching to handle variations or misspellings.
 Click “Search Businesses” to view results.
 
 
-View Results:
+Explore Results:
 
-See businesses on an interactive Folium map with markers and connecting lines.
-Browse a list with details (name, address, distance, rating, contact info).
-Click “Get Directions” for turn-by-turn navigation or enable live tracking.
+View businesses on an interactive Folium map with markers for your location (green) and businesses (red), connected by gray lines.
+Browse a detailed list with business names, addresses, distances, ratings, and contact info (phone, email, website if available).
+Expand the “Directions” section to select a travel mode (“walk” or “drive”) and click “Get Directions” for turn-by-turn instructions.
+Enable live tracking to update directions as you move (ideal for mobile devices).
 
 
 Export Map (Optional):
 
-Maps can be saved to static/map.html for offline viewing (requires enabling in code).
+Save the map to static/map.html for offline viewing by enabling the save_map_html function in utils.py.
 
 
 
@@ -81,7 +93,7 @@ Project Structure
 location-based-business-finder/
 ├── config/
 │   ├── config.py          # API key and settings management
-│   ├── utils.py           # Utility functions (API requests, logging, map export)
+│   ├── utils.py           # Utility functions for API calls, logging, and map export
 ├── core/
 │   ├── business.py        # Business class for data and directions
 │   ├── business_finder.py # Business search and filtering
@@ -93,96 +105,84 @@ location-based-business-finder/
 ├── .env                   # API keys (not tracked)
 ├── business_finder.log    # Error log file
 ├── main.py                # Application entry point
-├── README.md              # This file
+├── README.md              # Project documentation
+├── LICENSE                # MIT License file
+├── requirements.txt       # Dependencies list
 
 File Descriptions
 
 config.py:
 
-Purpose: Manages API keys and default settings.
-Functionality: Loads Geoapify/Foursquare keys from .env, provides defaults (radius: 1000m, category: “restaurant,” limit: 10).
-Role: Supplies configuration to all components.
+Manages API keys (Geoapify, Foursquare) and default settings (search radius: 1000m, default category: “restaurant,” limit: 10).
+Loads keys from .env for security and provides defaults for consistent searches.
 
 
 utils.py:
 
-Purpose: Provides utility functions for backend operations.
-Functionality: Handles API requests (make_api_request), IP geolocation (get_location_from_ip), error logging (log_error), and map export (save_map_html).
-Role: Supports robust API calls and fallbacks.
+Offers utility functions: make_api_request for reliable API calls with retries, get_location_from_ip for IP-based geolocation, log_error for logging to business_finder.log, and save_map_html for exporting Folium maps.
 
 
 location_manager.py:
 
-Purpose: Converts addresses to coordinates.
-Functionality: Uses Geoapify to geocode addresses (e.g., “Lagos, Nigeria” → (lat, lon)).
-Role: Provides coordinates for searches and maps.
+Converts addresses (e.g., “Wuye, Abuja”) to coordinates using Geoapify’s geocoding API, returning latitude, longitude, and formatted address.
 
 
 business_finder.py:
 
-Purpose: Searches and processes businesses.
-Functionality: Queries Geoapify for businesses, creates Business objects, filters by rating, sorts by distance.
-Role: Powers the core search functionality.
-Note: Contains a bug in filter_by_rating (see Known Issues).
+Searches for businesses near a location using Geoapify’s Places API, creates Business objects, and supports filtering by rating and sorting by distance.
 
 
 business.py:
 
-Purpose: Represents a business with attributes and methods.
-Functionality: Stores details (name, address, etc.), fetches directions, and gets Foursquare ratings.
-Role: Models business data for display and navigation.
+Represents a business with attributes (name, address, coordinates, etc.) and methods to fetch directions (Geoapify) and ratings (Foursquare).
 
 
 constant.py:
 
-Purpose: Defines Geoapify categories and maps user inputs.
-Functionality: Lists categories (e.g., “catering.buka”), fuzzy-matches inputs (e.g., “pharmacy” → “healthcare.pharmacy”).
-Role: Validates categories, supporting Nigerian terms.
+Defines Geoapify categories, including Nigerian-specific ones (e.g., “catering.buka”), and fuzzy-matches user inputs to valid categories.
 
 
 gui_manager.py:
 
-Purpose: Manages the Streamlit web interface.
-Functionality: Handles location/category input, displays maps and business lists, provides directions and live tracking.
-Role: Creates the user-facing experience.
+Manages the Streamlit interface, handling location/category input, displaying interactive maps and business lists, and providing directions with live tracking.
 
 
 main.py:
 
-Purpose: Entry point for the application.
-Functionality: Launches the app by running GUIManager.run_app.
-Role: Starts the Streamlit app.
+The entry point that launches the app by initializing GUIManager and calling run_app.
 
 
-
-Known Issues
-
-Bug in business_finder.py:
-In filter_by_rating, the line filtered.append(Business) incorrectly appends the Business class instead of the business instance. This may cause filtering to fail.
-Fix: Change to filtered.append(business).
-Impact: Filtering by rating may not work until fixed.
-
-
-Foursquare Integration: The Foursquare API key is loaded but not fully utilized (e.g., fetch_rating_from_foursquare is optional).
-Live Tracking: May not work reliably on desktop browsers without GPS; best on mobile devices.
 
 Contributing
-We welcome contributions! To contribute:
+We welcome contributions to enhance the Location Based Business Finder! To contribute:
 
 Fork the repository.
-Create a branch: git checkout -b feature/your-feature.
+Create a feature branch: git checkout -b feature/your-feature.
 Commit changes: git commit -m "Add your feature".
 Push to the branch: git push origin feature/your-feature.
-Open a pull request.
+Open a pull request with a clear description of your changes.
 
-Please follow these guidelines:
+Contribution Ideas:
 
-Fix the business_finder.py bug as a priority.
-Add tests (e.g., unit tests for BusinessFinder or LocationManager).
-Enhance features (e.g., add “bike” travel mode, improve live tracking).
-Document changes clearly.
+Add support for additional travel modes (e.g., “bike,” “tricycle”).
+Enhance live tracking for better desktop compatibility.
+Integrate more Foursquare features (e.g., reviews).
+Write unit tests for BusinessFinder and LocationManager.
 
+Please adhere to our Code of Conduct and ensure code is well-documented.
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
+Contact
 
-Developed by: [Group 6 Cohort 26 Python Advanced]Last Updated: July 16, 2025Contact: [Your Email or GitHub Issues]
+Project Maintainers: [Group 6 | Python Advanced | Cohort 26]
+GitHub: Davidayo123
+Issues: Report bugs or suggest features via GitHub Issues
+
+Contributors: 
+Ayotunde David Anointing: [ayotundeferanmi09@gmail.com]
+Omotayo Emmanuel Ayomide: [ayotundeferanmi09@gmail.com]
+Austine Victor Eshorameh: [austinev698@gmail.com ]
+Momoh Muhammad Mubarak: [Mubby1708@gmail.com]
+
+
+Developed by: [Group 6 | Python Advanced | Cohort 26]Last Updated: July 16, 2025Star this repository if you find it useful! 🌟
