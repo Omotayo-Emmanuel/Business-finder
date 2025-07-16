@@ -185,4 +185,5 @@ Austine Victor Eshorameh: [austinev698@gmail.com ]
 Momoh Muhammad Mubarak: [Mubby1708@gmail.com]
 
 
-Developed by: [Group 6 | Python Advanced | Cohort 26]Last Updated: July 16, 2025Star this repository if you find it useful! 🌟
+Developed by: [Group 6 | Python Advanced | Cohort 26]Last Updated: July 16, 2025
+Star this repository if you find it useful! 🌟
