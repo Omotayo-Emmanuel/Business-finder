@@ -158,7 +158,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 **Contributors**:
 - Ayotunde David Anointing: [ayotundeferanmi09@gmail.com](mailto:ayotundeferanmi09@gmail.com)
-- Omotayo Emmanuel Ayomide: [ayotundeferanmi09@gmail.com](mailto:ayotundeferanmi09@gmail.com)
+- Omotayo Emmanuel Ayomide: [ayotundeferanmi09@gmail.com](mailto:emmanuelomotayo720@gmail.com)
 - Austine Victor Eshorameh: [austinev698@gmail.com](mailto:austinev698@gmail.com)
 - Momoh Muhammad Mubarak: [Mubby1708@gmail.com](mailto:Mubby1708@gmail.com)
 
