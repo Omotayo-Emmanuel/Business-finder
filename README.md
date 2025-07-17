@@ -1,6 +1,6 @@
 
 
-```markdown
+
 # Location Based Business Finder
 
 Welcome to Location Based Business Finder, a Python-based web application designed to help users discover nearby businesses, such as restaurants, bukas, and pharmacies, with interactive maps and real-time navigation. Built using Streamlit and powered by Geoapify and Foursquare APIs, this project is tailored for Nigerian users, supporting local business categories like "buka" and "suya_spot." The application features an intuitive interface, live location tracking, and turn-by-turn directions, all developed with Object-Oriented Programming (OOP) principles for modularity and scalability.
