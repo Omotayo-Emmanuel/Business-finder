@@ -3,4 +3,5 @@ config/.env
 __pycache__/
 *.py[cod]
 *.log
+*.pyc
 static/map.html
