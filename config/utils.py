@@ -1,6 +1,7 @@
 # core/utils.py
 import webbrowser
 import os
+import requests
 import logging
 from functools import wraps
 import time
@@ -214,9 +215,16 @@ def save_map_html(lat: float, lon: float, businesses: list, api_key: str, filena
         filename (str): Output file path
     """
     try:
-        markers = "".join(
-            f"markers=lonlat:{b.lon},{b.lat};color:blue;text:{i + 1};size:small&"
+        markers = "&".join(
+            f"markers=lonlat:{b.longitude},{b.latitude};color:blue;text:{i + 1};size:small"
             for i, b in enumerate(businesses)
+        )
+
+        # Constructing full Geoapify static map URL
+        map_url = (
+            f"https://maps.geoapify.com/v1/staticmap?"
+            f"style=osm-carto&width=800&height=600&{markers}"
+            f"&center=lonlat:{lon},{lat}&zoom=14&apiKey={api_key}"
         )
 
         html_content = f"""<!DOCTYPE html>
@@ -224,9 +232,7 @@ def save_map_html(lat: float, lon: float, businesses: list, api_key: str, filena
         <head><title>Business Locations</title></head>
         <body>
             <h2>Business Locations</h2>
-            <img src="https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=800&height=600&
-            {markers}center=lonlat:{lon},{lat}&zoom=14&apiKey={api_key}" 
-            alt="Business Locations Map" style="width:100%; max-width:800px;">
+             <img src="{map_url}" alt="Business Locations Map" style="width:100%; max-width:800px;">
             <ol>{"".join(f"<li>{b.name} - {b.address}</li>" for b in businesses)}</ol>
         </body>
         </html>"""
@@ -258,3 +264,27 @@ def time_function(func: Callable) -> Callable:
         return result
 
     return wrapper
+
+def get_location_from_ip(api_key: str) -> tuple|None:
+    """
+    Uses Geoapify IP Geolocation API to estimate user location based on their IP address.
+    Args:
+        api_key (str): Your Geoapify API key.
+    Returns:
+        tuple or None: (latitude, longitude) if successful, else None.
+    """
+    url = "https://api.geoapify.com/v1/ipinfo"
+    params = {"apiKey": api_key}
+
+    try:
+        response = requests.get(url, params=params)
+        if response.status_code == 200:
+            data = response.json()
+            lat = data.get("location", {}).get("latitude")
+            lon = data.get("location", {}).get("longitude")
+            if lat and lon:
+                return (lat, lon)
+        return None
+    except Exception as e:
+        print(f"IP Geolocation failed: {e}")
+        return None

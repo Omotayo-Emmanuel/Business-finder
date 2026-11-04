@@ -14,14 +14,21 @@ A Python application to search for businesses near a specified location using AP
 Install dependencies:pip install -r requirements.txt
 
 
-Set up an API key (e.g., Geoapify):
+Set up API keys (e.g., Geoapify):
 Sign up at https://www.geoapify.com.
-Set the API key as an environment variable:export GEOAPIFY_API_KEY="your-api-key-here"
+Set the keys as environment variables:
+```bash
+GEOAPIFY_API_KEY="your-api-key-here"
+FOURSQUARE_API_KEY="your-foursquare-key"
+```
 
 
 
 
-Run the application:python main.py
+Run the application:
+```bash
+streamlit run main.py
+```
 
 
 
@@ -38,5 +45,4 @@ Usage
 Enter a location (e.g., "San Francisco, CA") in the GUI.
 Click "Search" to find nearby businesses.
 View results in a table and an interactive map.
-
 

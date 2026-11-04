@@ -1,4 +1,5 @@
 import os # to be able to interact with environment Variables
+from pathlib import Path
 from dotenv import load_dotenv # to load Variables from .env file into the environment
 
 
@@ -9,7 +10,7 @@ class Config:
         """Initialize configuration by loading environment variables and setting defaults.
         This allows sensitive data like our API KEYS to be kept outside the codebase.
         """
-        load_dotenv() # Loads key-value pairs
+        load_dotenv(Path(__file__).with_name(".env")) # Loads local key-value pairs without overriding deployed secrets
 
         # Loading the API keys from environment
         self.geoapify_key = os.getenv("GEOAPIFY_API_KEY")
@@ -28,7 +29,7 @@ class Config:
 
 
 
-    def get_api_key(self, service:str  = "geoapify") -> str:
+    def get_api_key(self, service:str) -> str:
         """Return the API key for external services.
         :param service: either "geoapify" or "Foursquare"
         :return: API key as a string"""
@@ -64,5 +65,4 @@ class Config:
             "output_file": self.map_output_file,
             "marker_color": self.marker_color
         }
-
 

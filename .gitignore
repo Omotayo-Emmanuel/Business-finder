@@ -1,0 +1,6 @@
+.env
+config/.env
+__pycache__/
+*.py[cod]
+*.log
+static/map.html
