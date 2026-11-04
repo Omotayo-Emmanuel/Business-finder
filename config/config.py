@@ -1,6 +1,7 @@
 import os # to be able to interact with environment Variables
 from pathlib import Path
 from dotenv import load_dotenv # to load Variables from .env file into the environment
+import streamlit as st # for displaying messages in the web app
 
 
 class Config:
@@ -13,9 +14,9 @@ class Config:
         load_dotenv(Path(__file__).with_name(".env")) # Loads local key-value pairs without overriding deployed secrets
 
         # Loading the API keys from environment
-        self.geoapify_key = os.getenv("GEOAPIFY_API_KEY")
-        self.foursquare_key = os.getenv("FOURSQUARE_API_KEY")
-        #self.google_key = os.getenv("GOOGLE_API_KEY")
+        self.geoapify_key = st.secrets.get("GEOAPIFY_API_KEY", os.getenv("GEOAPIFY_API_KEY"))
+        self.foursquare_key = st.secrets.get("FOURSQUARE_API_KEY", os.getenv("FOURSQUARE_API_KEY"))
+        #self.google_key = st.secrets.get("GOOGLE_API_KEY", os.getenv("GOOGLE_API_KEY"))
 
         # Default search setting for business finder
         self.default_radius  = 5000 # Radius in meters
