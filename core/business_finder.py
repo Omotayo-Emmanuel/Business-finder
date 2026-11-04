@@ -16,7 +16,10 @@ class BusinessFinder:
         """
         is_valid, msg = validate_api_key(api_key)
         if not is_valid:
-            raise ValueError(f"We have a Geoapify API key Error: {msg}")
+            raise ValueError(
+                f"Geoapify API key is missing or invalid: {msg}. "
+                "Add GEOAPIFY_API_KEY to Streamlit Cloud secrets."
+            )
 
         self.api_key = api_key
 
@@ -123,5 +126,4 @@ class BusinessFinder:
         sorted_businesses = sorted(businesses, key=lambda b: b.distance_m)
 
         return sorted_businesses
-
 

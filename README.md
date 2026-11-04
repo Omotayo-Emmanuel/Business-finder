@@ -92,6 +92,17 @@ Community Cloud is the simplest deployment option:
 4. Add `GEOAPIFY_API_KEY` and `FOURSQUARE_API_KEY` as deployment secrets.
 5. Deploy using the dependencies in `requirements.txt`.
 
+In Streamlit Cloud, open **Manage app > Settings > Secrets** and enter:
+
+```toml
+GEOAPIFY_API_KEY = "your-new-geoapify-api-key"
+FOURSQUARE_API_KEY = "your-new-foursquare-api-key"
+```
+
+The names are case-sensitive. Save the secrets, then reboot the app. Do not
+include a `[secrets]` section, commit these values to GitHub, or add spaces
+inside the key values.
+
 For other hosts, use this start command:
 
 ```bash
@@ -125,7 +136,8 @@ business_finder/
 - **Missing module:** activate the virtual environment and run
   `python -m pip install -r requirements.txt`.
 - **API key error:** confirm the variable names exactly match
-  `GEOAPIFY_API_KEY` and `FOURSQUARE_API_KEY`.
+  `GEOAPIFY_API_KEY` and `FOURSQUARE_API_KEY`, then save them under
+  **Manage app > Settings > Secrets** and reboot the app.
 - **No results:** try a broader business category or a different location.
 - **Location unavailable:** allow browser permission or use manual location entry.
 - **429/rate-limit response:** wait and retry, or check the provider's API quota.

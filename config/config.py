@@ -13,9 +13,9 @@ class Config:
         """
         load_dotenv(Path(__file__).with_name(".env")) # Loads local key-value pairs without overriding deployed secrets
 
-        # Loading the API keys from environment
-        self.geoapify_key = st.secrets.get("GEOAPIFY_API_KEY", os.getenv("GEOAPIFY_API_KEY"))
-        self.foursquare_key = st.secrets.get("FOURSQUARE_API_KEY", os.getenv("FOURSQUARE_API_KEY"))
+        # Prefer Streamlit Cloud secrets and fall back to local environment variables.
+        self.geoapify_key = self._get_secret("GEOAPIFY_API_KEY")
+        self.foursquare_key = self._get_secret("FOURSQUARE_API_KEY")
         #self.google_key = st.secrets.get("GOOGLE_API_KEY", os.getenv("GOOGLE_API_KEY"))
 
         # Default search setting for business finder
@@ -27,6 +27,19 @@ class Config:
         self.map_tile = "OpenStreetMap" # Using the default OpenstreetMap for simplicity and reliability
         self.map_output_file = "business_results_map.html" # Output HTML file name
         self.marker_color = "green" # using this as my default color for business markers
+
+    @staticmethod
+    def _get_secret(name: str) -> str | None:
+        """Read a deployment secret with a local environment fallback."""
+        value = os.getenv(name)
+        try:
+            value = st.secrets.get(name, value)
+        except (FileNotFoundError, RuntimeError):
+            pass
+
+        if isinstance(value, str):
+            value = value.strip()
+        return value or None
 
 
 
@@ -66,4 +79,3 @@ class Config:
             "output_file": self.map_output_file,
             "marker_color": self.marker_color
         }
-
